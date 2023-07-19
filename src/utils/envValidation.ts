@@ -1,7 +1,7 @@
 import { ZodError, z } from "zod";
 
 export const envVariables = z.object({
-  DISCORD_API_KEY: z.string().min(1),
+  DISCORD_API_KEY: z.string().nonempty(),
 });
 
 export function validateEnvVariables() {
